@@ -1,0 +1,10 @@
+alias ls='ls -FG'
+alias ll='ls -FhlaG'
+alias tmux='tmux -2'
+alias v='vim'
+alias cls='clear'
+
+function cd()
+{
+    builtin cd "$*" && ls
+}
