@@ -1,8 +1,9 @@
 alias ls='ls -FG'
 alias ll='ls -FhlaG'
-alias tmux='tmux -2'
+#alias tmux='tmux -2'
 alias v='vim'
 alias cls='clear'
+alias sc='p4'
 
 function cd()
 {

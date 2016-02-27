@@ -1,6 +1,13 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/acarlson/.oh-my-zsh
 
+# Path to Node.js libraries
+export NODE_PATH=/usr/local/lib/node_modules
+#export PATH="/usr/local/share/npm/bin
+
+# Path for locally installed binaries
+export PATH="/usr/local/bin:$PATH"
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -57,6 +64,8 @@ export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X
 export PATH="$HOME/bin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 
+# Disable asking to update (affects SSH'ed scripts)
+DISABLE_AUTO_UPDATE="true"
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
@@ -102,6 +111,9 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # P4 Support
 export P4PORT=vlsip4:1668
+export P4EDITOR=vim
+export P4USER=acarlson
+export P4CLIENT=acarlson_mbp
 #set p4commands=(add branch branches change changes \
 #                client clients delete depot depots \
 #                describe diff diff2 edit files filelog \
@@ -114,3 +126,4 @@ export P4PORT=vlsip4:1668
 #complete *p4     'c/-/(c d p u x)/' 'p/1/$p4commands/' \
 #                 'n/help/$p4commands/' 'n/*/f:*/'
 
+test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
